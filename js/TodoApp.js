@@ -1,35 +1,12 @@
-var LOCAL_STORAGE_KEY = "todoList";
-
-var listTodo = function(){
-	return JSON.parse(window.localStorage.getItem(LOCAL_STORAGE_KEY)) || ['Test'];
-};
-
-var storeTodo = function(todo){
-
-	var data = listTodo().concat([todo]);
-
-	window.localStorage.setItem(LOCAL_STORAGE_KEY,JSON.stringify(data));
-
-	return data;
-};
-
-var deleteTodo = function(todo){
-  var data = _.without(listTodo(),todo);
-
-  window.localStorage.setItem(LOCAL_STORAGE_KEY,JSON.stringify(data));
-
-  return data;
-};
-
 var TodoApp = React.createClass({
   getInitialState: function() {
-  	return {data: listTodo()};
+  	return {data: todoRepository.list()};
   },
   onSave:function(todo){
-    this.setState({data:storeTodo(todo)});
+    this.setState({data:todoRepository.store(todo)});
   },
   onDelete:function(todo){
-    this.setState({data:deleteTodo(todo)});
+    this.setState({data:todoRepository.delete(todo)});
   },
   render: function() {
     return (
