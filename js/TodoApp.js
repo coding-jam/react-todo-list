@@ -15,14 +15,18 @@ var store = function(todo){
 
 var TodoApp = React.createClass({
   getInitialState: function() {
-  	console.log(list());
-    return {data: list()};
+  	return {data: list()};
+  },
+  onSave:function(todo){
+    this.setState({data:store(todo)});
   },
   render: function() {
     return (
     	<div>
       		<h1>TodoApp</h1>
-      		<TodoList data={this.state.data}></TodoList>
+          <TodoForm onSave={this.onSave}/>
+          <hr/>
+      		<TodoList data={this.state.data}/>
       	</div>
     );
   }
