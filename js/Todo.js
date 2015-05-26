@@ -8,7 +8,7 @@ var Todo = React.createClass({
         <td>
       	{this.props.value}
         <button className="pull-right btn btn-default" onClick={this.onDeleteClick}>
-          Delete
+          Done
         </button>
         </td>
       </tr>
