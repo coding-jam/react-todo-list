@@ -9,10 +9,18 @@ var TodoForm = React.createClass({
 	},
 	render: function() {
 		return (
-		 	<div>
-		 		<input type="text" ref="todoInput"></input>
-		 		<button onClick={this.saveTodo}>Save</button>
-		 	</div>
+			<div className="container">
+			  <div className="row">
+			  	<div className="col-sm-8">
+			  		<input type="text" className="form-control" id="textInput" ref="todoInput" placeholder="Add Todo..."/>
+			  	</div>
+			  	<div className="col-sm-4">
+			  		<button className="btn btn-default" onClick={this.saveTodo}>
+			  			Save
+			  		</button>
+			  	</div>
+			  </div>
+			</div>
 		);
 	}
 });

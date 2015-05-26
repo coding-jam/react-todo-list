@@ -4,10 +4,14 @@ var Todo = React.createClass({
   },
   render: function() {
     return (
-      <li>
+      <tr>
+        <td>
       	{this.props.value}
-      	<button onClick={this.onDeleteClick}>Cancella</button>
-      </li>
+        <button className="pull-right btn btn-default" onClick={this.onDeleteClick}>
+          Delete
+        </button>
+        </td>
+      </tr>
     );
   }
 });

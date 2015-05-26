@@ -11,11 +11,11 @@ var TodoApp = React.createClass({
   render: function() {
     return (
     	<div>
-      		<h1>TodoApp</h1>
-          <TodoForm onSave={this.onSave}/>
-          <hr/>
-      		<TodoList onDeleteCallback={this.onDelete} data={this.state.data}/>
-      	</div>
+    		<h1 className="text-center">TodoApp</h1>
+        <TodoForm onSave={this.onSave}/>
+        <hr/>
+    		<TodoList onDeleteCallback={this.onDelete} data={this.state.data}/>
+    	</div>
     );
   }
 });
