@@ -17,12 +17,10 @@ var todoRepository = todoRepository || {};
 	};
 
 	todoRepository.delete = function(todo){
-		var data = todoRepository.list();
-		
-		var indexOfTodo = data.indexOf(todo);
-		
-		window.localStorage.setItem(LOCAL_STORAGE_KEY,JSON.stringify(data.splice(indexOfTodo,1)));
+	  var data = _.without(todoRepository.list(),todo);
 
-	  	return data;
+	  window.localStorage.setItem(LOCAL_STORAGE_KEY,JSON.stringify(data));
+
+	  return data;
 	};
 }());
