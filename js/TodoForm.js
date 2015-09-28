@@ -12,7 +12,7 @@ var TodoForm = React.createClass({
 			<div className="container">
 			  <div className="row">
 			  	<div className="col-sm-8">
-			  		<input type="text" className="form-control" id="textInput" ref="todoInput" placeholder="Add Todo..."/>
+			  		<input ref="todoInput" type="text" className="form-control" id="textInput" placeholder="Add Todo..."/>
 			  	</div>
 			  	<div className="col-sm-4">
 			  		<button type="button" className="btn btn-default" onClick={this.saveTodo}>
