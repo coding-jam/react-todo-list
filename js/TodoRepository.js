@@ -1,17 +1,17 @@
 var todoList = [];
 
 var list = function(){
-    return todoList;
+    return axios.get('http://localhost:3000/api/todo');
 };
 
 var store = function(todo){
-    todoList.push(todo);
-    return todoList;
+    return axios.post('http://localhost:3000/api/todo',{
+        todo:todo
+    });
 };
 
 var remove = function(index){
-    todoList.splice(index, 1);
-    return todoList;
+    return axios.delete('http://localhost:3000/api/todo/' + index);
 }
 
 var todoRepository = todoRepository || {};
