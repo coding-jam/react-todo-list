@@ -6,6 +6,7 @@ var list = function(){
 
 var store = function(todo){
     todoList.push(todo);
+    return todoList;
 };
 
 var remove = function(index){
