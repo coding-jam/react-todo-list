@@ -9,8 +9,8 @@ var store = function(todo){
     return todoList;
 };
 
-var remove = function(todo){
-    todoList = _.without(todoList,todo);
+var remove = function(index){
+    todoList.splice(index, 1);
     return todoList;
 }
 

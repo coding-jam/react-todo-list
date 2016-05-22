@@ -1,6 +1,6 @@
 var Todo = React.createClass({
   onDeleteClick:function(){
-  	this.props.onDeleteCallback(this.props.value);
+  	this.props.onDeleteCallback(this.props.key);
   },
   render: function() {
     return (
