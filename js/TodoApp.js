@@ -6,7 +6,7 @@ var TodoApp = React.createClass({
     this.setState({data:todoRepository.store(todo)});
   },
   onDelete:function(todo){
-    this.setState({data:todoRepository.delete(todo)});
+    this.setState({data:todoRepository.remove(todo)});
   },
   render: function() {
     return (
