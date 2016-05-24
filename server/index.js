@@ -9,7 +9,7 @@ app.get('/api/todo', function (req, res) {
   res.send(todoRepository.list());
 });
 
-app.get('/api/todo', function (req, res) {
+app.post('/api/todo', function (req, res) {
   res.send(todoRepository.store(req.body.todo));
 });
 

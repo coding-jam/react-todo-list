@@ -1,5 +1,3 @@
-var todoList = [];
-
 var list = function(){
     return axios.get('http://localhost:3000/api/todo');
 };
